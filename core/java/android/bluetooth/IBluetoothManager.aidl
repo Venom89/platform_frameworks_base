@@ -34,9 +34,9 @@ interface IBluetoothManager
     void registerStateChangeCallback(in IBluetoothStateChangeCallback callback);
     void unregisterStateChangeCallback(in IBluetoothStateChangeCallback callback);
     boolean isEnabled();
-    boolean enable(String packageName);
-    boolean enableNoAutoConnect(String packageName);
-    boolean disable(String packageName, boolean persist);
+    boolean enable(String callingPackage);
+    boolean enableNoAutoConnect();
+    boolean disable(boolean persist);
     int getState();
     IBluetoothGatt getBluetoothGatt();
 
