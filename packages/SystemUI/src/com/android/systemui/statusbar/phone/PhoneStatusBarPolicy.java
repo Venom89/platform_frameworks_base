@@ -352,7 +352,7 @@ public class PhoneStatusBarPolicy implements Callback, RotationLockController.Ro
         if (mBluetooth != null) {
             bluetoothEnabled = mBluetooth.isBluetoothEnabled();
             if (mBluetooth.isBluetoothConnected()) {
-                if (mBluetoothBatteryLevel == null) {
+                if (mBluetoothBatteryLevel == null || !mShowBluetoothBattery) {
                     iconId = R.drawable.stat_sys_data_bluetooth_connected;
                 } else {
                     if (mBluetoothBatteryLevel<=0.15f) {
